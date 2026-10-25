@@ -30,21 +30,21 @@ is the dispatcher). Copy it in alongside the others so the agent can route reque
 
 The [`skills` CLI](https://www.npmjs.com/package/skills) is the package manager for the Agent
 Skills ecosystem. It detects the agents installed on your machine and installs the skills (the
-router plus all 76) into each one's skills directory — no clone required. It needs Node.js 22.20
+router plus all 81) into each one's skills directory — no clone required. It needs Node.js 22.20
 or later. Interactive runs ask which skills and agents to use; by default each agent directory is
 a symlink to one shared copy (add `--copy` for independent copies, `-y` to skip the prompts):
 
 ```bash
 # install into whatever agent(s) you have
-npx skills add gamedev-skills/awesome-gamedev-agent-skills
+npx skills add Yiheng-guo/pm-game-skills
 
 # preview the skill list without installing anything
-npx skills add gamedev-skills/awesome-gamedev-agent-skills --list
+npx skills add Yiheng-guo/pm-game-skills --list
 
 # target one agent · install globally for all projects · grab a subset
-npx skills add gamedev-skills/awesome-gamedev-agent-skills -a cursor
-npx skills add gamedev-skills/awesome-gamedev-agent-skills -g
-npx skills add gamedev-skills/awesome-gamedev-agent-skills --skill godot-tilemap --skill platformer
+npx skills add Yiheng-guo/pm-game-skills -a cursor
+npx skills add Yiheng-guo/pm-game-skills -g
+npx skills add Yiheng-guo/pm-game-skills --skill godot-tilemap --skill platformer
 ```
 
 Companions: `npx skills list` (what's installed), `npx skills check` (look for updates),
@@ -60,10 +60,10 @@ This repo is a Claude Code plugin marketplace (see [`.claude-plugin/marketplace.
 so you can install it without cloning or copying files. Add the marketplace once:
 
 ```bash
-claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills
+claude plugin marketplace add Yiheng-guo/pm-game-skills
 ```
 
-Easiest — install the router and all 76 skills in one command:
+Easiest — install the router and all 81 skills in one command:
 
 ```bash
 claude plugin install gamedev@awesome-gamedev-agent-skills
@@ -160,7 +160,7 @@ cp -R skills/godot/godot-tilemap .agents/skills/
 Gemini CLI and Codex can also be targeted by the universal CLI, no clone needed:
 
 ```bash
-npx skills add gamedev-skills/awesome-gamedev-agent-skills -a gemini-cli   # or: -a codex
+npx skills add Yiheng-guo/pm-game-skills -a gemini-cli   # or: -a codex
 ```
 
 - **Gemini CLI:** manage and verify with `/skills`; activation prompts for consent.
@@ -200,7 +200,7 @@ Upload the complete skill folder so bundled references, scripts, and assets rema
 ## Cursor / Windsurf / Cline (native skills)
 
 These editors read `SKILL.md` natively — there is no rule-file conversion. The simplest install is
-the universal CLI (`npx skills add gamedev-skills/awesome-gamedev-agent-skills -a cursor`; swap in
+the universal CLI (`npx skills add Yiheng-guo/pm-game-skills -a cursor`; swap in
 `windsurf` or `cline`). To place files by hand:
 
 ```bash
@@ -228,8 +228,8 @@ skills into one of those directories as above, or use GitHub CLI 2.90.0 or later
 `gh skill` command is in public preview:
 
 ```bash
-gh skill install gamedev-skills/awesome-gamedev-agent-skills --all           # every skill + router
-gh skill install gamedev-skills/awesome-gamedev-agent-skills godot-tilemap   # one skill
+gh skill install Yiheng-guo/pm-game-skills --all           # every skill + router
+gh skill install Yiheng-guo/pm-game-skills godot-tilemap   # one skill
 ```
 
 `gh skill` writes source-tracking metadata into each installed `SKILL.md` so `gh skill update`

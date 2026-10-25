@@ -1,7 +1,12 @@
+# Compatibility and verification scope
+
+The baseline table below is inherited from upstream revision 184b72be. Its release claims have not been independently revalidated for this derivative. It is not a recommendation to install those versions. Read the existing project version and official docs before choosing APIs. Engine runtimes require their own execution checks; document validation does not prove engine compatibility. The accompanying Orbit Dispatch project exercises the browser-native route.
+
+## Inherited authoring baseline
+
 # Version support
 
-Checked **2026-10-24**: every row below was re-checked against the latest stable release, and
-the skills were reviewed against it. These are
+Upstream states a check date of **2026-10-24**. These are
 authoring baselines for **new projects**, not forced upgrade
 targets. Existing projects keep the version declared by their manifest, lockfile, or engine
 metadata unless the user explicitly asks for migration.

@@ -7,6 +7,14 @@ description: >
   the user mentions Unity physics, AddForce, isKinematic, or linearVelocity.
 ---
 
+## Delivery contract
+
+Use the actual project version and the player's observable outcome as the contract.
+For a whole-game request, compose with `game-product-brief`, `game-engine-selection`,
+`game-code-quality` and `game-playtest-release` as needed; a narrow fix does not require
+creating a new process or changing engines. Read [acceptance scenarios](references/acceptance.md)
+before declaring this feature ready. These are test specifications, not evidence of execution.
+
 # Unity Physics (Rigidbody / PhysX)
 
 Make objects move, collide, and detect each other with Unity 6.3 LTS's built-in 3D physics

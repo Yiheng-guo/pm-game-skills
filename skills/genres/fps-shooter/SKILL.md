@@ -5,6 +5,14 @@ description: >
   health, and enemy AI. Use for an FPS, or tuning aim feel, time-to-kill, recoil, or spread.
 ---
 
+## Delivery contract
+
+Use the actual project version and the player's observable outcome as the contract.
+For a whole-game request, compose with `game-product-brief`, `game-engine-selection`,
+`game-code-quality` and `game-playtest-release` as needed; a narrow fix does not require
+creating a new process or changing engines. Read [acceptance scenarios](references/acceptance.md)
+before declaring this feature ready. These are test specifications, not evidence of execution.
+
 # FPS Shooter
 
 A playbook for first-person shooters — the look/move controller, the shooting model, weapon

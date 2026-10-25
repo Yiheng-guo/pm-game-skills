@@ -12,6 +12,14 @@ description: >
   when unsure which gamedev skill to use.
 ---
 
+## Product-to-playable entry policy
+
+For a new whole game, begin with `game-product-brief` and `game-engine-selection`, then route only the needed engine/discipline/genre skills. Use `game-code-quality` during implementation and `game-playtest-release` before sharing. Preserve explicit user choices. Narrow fixes use only their focused skill and relevant acceptance scenario.
+
+No existing engine + small browser board/card/puzzle + URL delivery routes to `web-game-core`; it does not require Godot or Phaser. Resolve installed skills by their frontmatter name or catalog path: repository paths are grouped, while standard installers flatten folders. Do not assume `skills/<category>/` exists inside the user's game project.
+
+Read each selected skill's local acceptance reference. An engine version mentioned in inherited text is an authoring baseline, not a verified installed/current version. Validate against the project's actual official API docs and report runtime coverage honestly.
+
 # Master Router — Game-Development Skill Dispatcher
 
 The entry point for game-development work. It fingerprints the project to pick **one** engine,
@@ -36,7 +44,7 @@ new engine or concern (router step 6).
    "unknown"), then read the project's version source. §1.
 2. **Classify task** — phrasing → discipline(s) + at most one genre + workflow(s). §2.
 3. **Resolve** — the minimal set: engine skill(s) + discipline(s) + genre + workflow(s). §3.
-4. **Read (disclosure)** — open only the chosen `SKILL.md` bodies; `references/` only on demand. §4.
+4. **Read (disclosure)** — resolve repository or installed folders by skill name, then open only the chosen `SKILL.md` bodies; `references/` only on demand. §4.
 5. **Compose** — order: engine fundamentals → discipline concept → genre glue → workflow. §5.
 6. **Fallback** — engine unknown or no skill fits → ask or default to Godot; state any gap. §6.
 
@@ -213,9 +221,7 @@ skill's `feel-tuning.md` reference if you want coyote-time/buffering."*
 1. Check the request for a plain-text engine name ("in Unity", "using Phaser"). If found, adopt it.
 2. If the task is a pure concept/genre/workflow question, route straight to the engine-agnostic
    discipline/genre/workflow skill — no engine needed ("what's a good save format?" → `save-systems`).
-3. Only if engine choice actually blocks the answer, ask **one** targeted question ("Which engine —
-   Godot, Unity, Unreal, or a web/other engine?"). If the user has no preference and one is needed,
-   **default to Godot** (the most fully covered engine here) and say so.
+3. For a new game, use `game-engine-selection`: choose from player, mechanic, target device and delivery constraints. Ask only if a material constraint cannot be inferred. Browser-native board games use `web-game-core`; editor-authored or native games may favor Godot. Never choose by catalog size.
 4. Never invent an engine or load an engine skill on a guess.
 
 **Engine known but no skill covers the subtask:** load the closest engine skill plus the relevant

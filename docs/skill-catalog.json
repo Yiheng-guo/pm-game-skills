@@ -1,0 +1,878 @@
+{
+  "upstreamCommit": "184b72be02884f782a0058f2eeae2ce4277453e4",
+  "specializedSkills": 81,
+  "router": "router",
+  "skills": [
+    {
+      "name": "ai-behavior-trees-utility-ai",
+      "path": "skills/disciplines/ai-behavior-trees-utility-ai",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/ai-behavior-trees-utility-ai/references/acceptance.md",
+      "scenarios": [
+        "A higher-priority threat interrupts a running action and its abort runs once",
+        "Equal utility scores have a deterministic tie-break; missing blackboard data fails safely",
+        "A despawned agent leaves no running task or listener"
+      ]
+    },
+    {
+      "name": "audio-design",
+      "path": "skills/disciplines/audio-design",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/audio-design/references/acceptance.md",
+      "scenarios": [
+        "Music, effects and UI volumes respond independently without clipping",
+        "Muted startup and denied audio activation leave gameplay usable",
+        "Repeated scene entry does not multiply voices or leak audio nodes"
+      ]
+    },
+    {
+      "name": "camera-systems",
+      "path": "skills/disciplines/camera-systems",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/camera-systems/references/acceptance.md",
+      "scenarios": [
+        "The player and next actionable hazard remain in frame at level edges",
+        "Teleport, respawn and extreme aspect ratios do not expose outside bounds",
+        "Camera shake never changes collision or targeting coordinates"
+      ]
+    },
+    {
+      "name": "create-game-assets",
+      "path": "skills/disciplines/create-game-assets",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/create-game-assets/references/acceptance.md",
+      "scenarios": [
+        "Player, enemies and environment share the agreed scale, palette and silhouette language",
+        "Transparent edges and nearest/linear filtering are checked at actual game scale",
+        "The manifest records license, source, dimensions and importer settings"
+      ]
+    },
+    {
+      "name": "dialogue-systems",
+      "path": "skills/disciplines/dialogue-systems",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/dialogue-systems/references/acceptance.md",
+      "scenarios": [
+        "Every offered choice reaches a valid node and updates the intended flags",
+        "A missing target, cyclic auto-advance or invalid condition is detected without hanging",
+        "Save and restore preserve choice consequences without repeating rewards"
+      ]
+    },
+    {
+      "name": "game-ai",
+      "path": "skills/disciplines/game-ai",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/game-ai/references/acceptance.md",
+      "scenarios": [
+        "Enemies transition between idle, pursuit and recovery using observable conditions",
+        "Unreachable targets and disappearing targets recover rather than spin",
+        "Decision cadence is bounded and motion remains owned by the movement system"
+      ]
+    },
+    {
+      "name": "game-feel",
+      "path": "skills/disciplines/game-feel",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/game-feel/references/acceptance.md",
+      "scenarios": [
+        "A meaningful impact produces short synchronized feedback with input still responsive",
+        "Rapid overlapping impacts return to baseline and cannot freeze simulation",
+        "Reduced-motion mode removes shake and flashes without hiding hit confirmation"
+      ]
+    },
+    {
+      "name": "game-ui-ux",
+      "path": "skills/disciplines/game-ui-ux",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/game-ui-ux/references/acceptance.md",
+      "scenarios": [
+        "A first-time player can start, understand progress, finish and restart using the target input",
+        "Narrow screens, long labels and 200-percent text do not hide essential controls",
+        "Overlay focus returns to its trigger and background controls cannot fire"
+      ]
+    },
+    {
+      "name": "input-systems",
+      "path": "skills/disciplines/input-systems",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/input-systems/references/acceptance.md",
+      "scenarios": [
+        "Each action fires once per intended press across supported bindings",
+        "Lost focus, held keys, touch cancellation and device switching do not leave stuck actions",
+        "Menus consume their actions so gameplay does not also receive them"
+      ]
+    },
+    {
+      "name": "level-design",
+      "path": "skills/disciplines/level-design",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/level-design/references/acceptance.md",
+      "scenarios": [
+        "A complete start-to-goal route is reachable using the actual movement metrics",
+        "The player can recover from detours or is told how to restart after a softlock",
+        "A later level introduces a new decision rather than only repeating a larger layout"
+      ]
+    },
+    {
+      "name": "performance-optimization",
+      "path": "skills/disciplines/performance-optimization",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/performance-optimization/references/acceptance.md",
+      "scenarios": [
+        "The same worst-case scene is measured before and after with device and sample duration",
+        "Peak entity count and long-session memory behavior are sampled without debug overlays",
+        "Optimization preserves state outcomes for a deterministic input replay"
+      ]
+    },
+    {
+      "name": "physics-tuning",
+      "path": "skills/disciplines/physics-tuning",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/physics-tuning/references/acceptance.md",
+      "scenarios": [
+        "Movement and contact outcomes are comparable at low and high render rates",
+        "Thin walls, fast bodies and stacked objects do not tunnel or explode under the target settings",
+        "Pause and resume do not inject a huge accumulated timestep"
+      ]
+    },
+    {
+      "name": "procedural-gen",
+      "path": "skills/disciplines/procedural-gen",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/procedural-gen/references/acceptance.md",
+      "scenarios": [
+        "A published seed reconstructs the same playable layout and spawn choices",
+        "An explicit seed set checks connectivity, spawn safety and objective reachability",
+        "Generation has an attempt cap and a known-playable fallback"
+      ]
+    },
+    {
+      "name": "save-systems",
+      "path": "skills/disciplines/save-systems",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/save-systems/references/acceptance.md",
+      "scenarios": [
+        "Round-trip save/load reproduces authoritative state and unlocks",
+        "Malformed, truncated, older and future-version data recover without overwriting the last good save",
+        "Storage denial is visible but does not prevent a new local game"
+      ]
+    },
+    {
+      "name": "shader-programming",
+      "path": "skills/disciplines/shader-programming",
+      "category": "disciplines",
+      "acceptance": "skills/disciplines/shader-programming/references/acceptance.md",
+      "scenarios": [
+        "The intended effect compiles on the target renderer and preserves readable silhouettes",
+        "Missing textures, extreme uniform values and low-end precision fail predictably",
+        "Material instances do not unintentionally mutate every object sharing the resource"
+      ]
+    },
+    {
+      "name": "ebitengine-game",
+      "path": "skills/ebitengine/ebitengine-game",
+      "category": "ebitengine",
+      "acceptance": "skills/ebitengine/ebitengine-game/references/acceptance.md",
+      "scenarios": [
+        "The world package tests pass and a clean checkout builds for the intended target",
+        "Focus loss, resize and browser audio activation are exercised in the actual build",
+        "Update owns simulation and Draw cannot mutate authoritative state"
+      ]
+    },
+    {
+      "name": "card-game",
+      "path": "skills/genres/card-game",
+      "category": "genres",
+      "acceptance": "skills/genres/card-game/references/acceptance.md",
+      "scenarios": [
+        "A legal turn pays cost once, resolves effects in order and reaches the next actor",
+        "Empty deck, duplicate effects and invalid targets cannot duplicate cards or resources",
+        "A seeded replay produces the same zones and winner"
+      ]
+    },
+    {
+      "name": "fps-shooter",
+      "path": "skills/genres/fps-shooter",
+      "category": "genres",
+      "acceptance": "skills/genres/fps-shooter/references/acceptance.md",
+      "scenarios": [
+        "Look, fire, hit confirmation, reload, enemy response and restart form a complete loop",
+        "Zero ammo, simultaneous death and lost pointer lock have usable recovery",
+        "Visual recoil does not silently change the authoritative shot unless designed"
+      ]
+    },
+    {
+      "name": "platformer",
+      "path": "skills/genres/platformer",
+      "category": "genres",
+      "acceptance": "skills/genres/platformer/references/acceptance.md",
+      "scenarios": [
+        "The actual controller completes a representative jump, landing and goal route",
+        "Buffered jump, ledge departure, ceiling contact and respawn avoid stuck states",
+        "Camera, animation and particles cannot change collision truth"
+      ]
+    },
+    {
+      "name": "puzzle",
+      "path": "skills/genres/puzzle",
+      "category": "genres",
+      "acceptance": "skills/genres/puzzle/references/acceptance.md",
+      "scenarios": [
+        "A known solution reaches the goal under the real action and move-budget rules",
+        "Illegal moves, unsolvable starts, repeated input and last-move wins resolve unambiguously",
+        "Undo restores the complete board and move budget while assistance remains disclosed"
+      ]
+    },
+    {
+      "name": "roguelike",
+      "path": "skills/genres/roguelike",
+      "category": "genres",
+      "acceptance": "skills/genres/roguelike/references/acceptance.md",
+      "scenarios": [
+        "A seeded run supports movement, turn combat, loot and an explicit end condition",
+        "Blocked movement, no legal spawn and simultaneous death have deterministic handling",
+        "Permadeath and continuation rules do not duplicate loot or preserve forbidden state"
+      ]
+    },
+    {
+      "name": "rpg",
+      "path": "skills/genres/rpg",
+      "category": "genres",
+      "acceptance": "skills/genres/rpg/references/acceptance.md",
+      "scenarios": [
+        "Quest progress, inventory, combat and rewards close one complete playable quest",
+        "Full inventory, repeated interaction and reloading before reward cannot duplicate grants",
+        "Save/load preserves equipment-derived stats and quest state"
+      ]
+    },
+    {
+      "name": "survival-crafting",
+      "path": "skills/genres/survival-crafting",
+      "category": "genres",
+      "acceptance": "skills/genres/survival-crafting/references/acceptance.md",
+      "scenarios": [
+        "Gathering pays a recipe cost once and unlocks a meaningful survival choice",
+        "Full inventory, insufficient materials and simultaneous crafting cannot create negative resources",
+        "Death/restart semantics and resource respawn policies are explicit"
+      ]
+    },
+    {
+      "name": "tower-defense",
+      "path": "skills/genres/tower-defense",
+      "category": "genres",
+      "acceptance": "skills/genres/tower-defense/references/acceptance.md",
+      "scenarios": [
+        "A complete wave spends currency, follows lanes and resolves victory or base damage",
+        "Blocked lanes, sold towers and final-enemy death cannot stall wave completion",
+        "Projectiles and target listeners are cleaned when their tower or target disappears"
+      ]
+    },
+    {
+      "name": "visual-novel",
+      "path": "skills/genres/visual-novel",
+      "category": "genres",
+      "acceptance": "skills/genres/visual-novel/references/acceptance.md",
+      "scenarios": [
+        "A short route reaches an ending through at least one consequential choice",
+        "Skipping, auto mode and rapid clicks cannot select an unintended choice",
+        "Backlog and save/load preserve speaker, line position and flags"
+      ]
+    },
+    {
+      "name": "godot-2d-movement",
+      "path": "skills/godot/godot-2d-movement",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-2d-movement/references/acceptance.md",
+      "scenarios": [
+        "The CharacterBody2D walks, jumps and lands in a runnable scene",
+        "Slopes, ceilings and floor edges do not reset jump state incorrectly",
+        "Velocity is applied in the physics callback with matching Godot-version APIs"
+      ]
+    },
+    {
+      "name": "godot-3d-essentials",
+      "path": "skills/godot/godot-3d-essentials",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-3d-essentials/references/acceptance.md",
+      "scenarios": [
+        "An exported scene has a current camera, visible geometry and readable lighting",
+        "Near-plane clipping, aspect changes and missing environment do not yield a blank screen",
+        "Local/global transforms remain correct after reparenting"
+      ]
+    },
+    {
+      "name": "godot-animation",
+      "path": "skills/godot/godot-animation",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-animation/references/acceptance.md",
+      "scenarios": [
+        "Requested state transitions play once with a stable return to idle",
+        "Interrupted tweens, freed targets and overlapping transitions do not leave a distorted pose",
+        "Animation method tracks cannot grant gameplay rewards twice"
+      ]
+    },
+    {
+      "name": "godot-audio",
+      "path": "skills/godot/godot-audio",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-audio/references/acceptance.md",
+      "scenarios": [
+        "Streams use the intended buses and saved mute/volume settings",
+        "Missing stream, unavailable device and browser activation do not block startup",
+        "Scene reload does not layer duplicate music players"
+      ]
+    },
+    {
+      "name": "godot-csharp",
+      "path": "skills/godot/godot-csharp",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-csharp/references/acceptance.md",
+      "scenarios": [
+        "The declared .NET SDK builds scripts against the project's exact Godot version",
+        "Missing exported references fail with a useful message rather than a null crash",
+        "Signal subscriptions are removed before managed nodes are freed"
+      ]
+    },
+    {
+      "name": "godot-export",
+      "path": "skills/godot/godot-export",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-export/references/acceptance.md",
+      "scenarios": [
+        "A clean export opens at the correct entry scene outside the editor",
+        "Missing export templates, imported assets and relative paths are checked explicitly",
+        "Signing credentials and platform identifiers stay out of the repository"
+      ]
+    },
+    {
+      "name": "godot-gdscript",
+      "path": "skills/godot/godot-gdscript",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-gdscript/references/acceptance.md",
+      "scenarios": [
+        "The script parses and the attached scene exercises its public behavior",
+        "Null exported references, freed instances and invalid resources are handled",
+        "Lifecycle ownership prevents duplicate setup on scene re-entry"
+      ]
+    },
+    {
+      "name": "godot-gdscript-headless-testing",
+      "path": "skills/godot/godot-gdscript-headless-testing",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-gdscript-headless-testing/references/acceptance.md",
+      "scenarios": [
+        "A fresh import followed by the test command returns zero only on success",
+        "An intentional assertion failure returns nonzero and terminates without hanging",
+        "Tests have bounded completion and do not depend on an existing import cache"
+      ]
+    },
+    {
+      "name": "godot-multiplayer",
+      "path": "skills/godot/godot-multiplayer",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-multiplayer/references/acceptance.md",
+      "scenarios": [
+        "Two separate peers connect and authoritative state converges",
+        "Disconnect, invalid RPC payload and unauthorized sender are rejected or recovered",
+        "Reconnection cannot leave duplicate player nodes or grant rewards twice"
+      ]
+    },
+    {
+      "name": "godot-nodes-scenes",
+      "path": "skills/godot/godot-nodes-scenes",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-nodes-scenes/references/acceptance.md",
+      "scenarios": [
+        "Two instances of a reusable scene operate independently",
+        "Removing a child or missing a resource produces a clear recoverable error",
+        "Reloading the scene does not accumulate autoload state or signals"
+      ]
+    },
+    {
+      "name": "godot-physics",
+      "path": "skills/godot/godot-physics",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-physics/references/acceptance.md",
+      "scenarios": [
+        "The intended collision pair is confirmed in a runnable 2D or 3D scene",
+        "Layer/mask mismatch, fast motion and overlapping spawn are covered",
+        "The actual physics backend and fixed-step settings are recorded"
+      ]
+    },
+    {
+      "name": "godot-resources",
+      "path": "skills/godot/godot-resources",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-resources/references/acceptance.md",
+      "scenarios": [
+        "Two consumers can share configuration without sharing unintended run state",
+        "Missing resource and older serialized fields load safely",
+        "Runtime mutation uses a deliberate duplicate policy for nested resources"
+      ]
+    },
+    {
+      "name": "godot-shaders",
+      "path": "skills/godot/godot-shaders",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-shaders/references/acceptance.md",
+      "scenarios": [
+        "The shader compiles and renders on the selected Godot renderer",
+        "Unsupported feature, transparent edge and extreme uniform values have a fallback",
+        "Shared ShaderMaterial changes are isolated when per-object effects are intended"
+      ]
+    },
+    {
+      "name": "godot-signals-groups",
+      "path": "skills/godot/godot-signals-groups",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-signals-groups/references/acceptance.md",
+      "scenarios": [
+        "An emitted event reaches exactly the intended receivers",
+        "A freed receiver, repeated connect and group membership change cause no duplicate effects",
+        "Scene teardown disconnects long-lived publishers from short-lived listeners"
+      ]
+    },
+    {
+      "name": "godot-tilemap",
+      "path": "skills/godot/godot-tilemap",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-tilemap/references/acceptance.md",
+      "scenarios": [
+        "A small painted level has matching visual, collision and navigation tiles",
+        "Boundary cells, empty cells and atlas changes do not create invisible blockers",
+        "Logical layers and TileSet resources use the project's actual Godot APIs"
+      ]
+    },
+    {
+      "name": "godot-ui-control",
+      "path": "skills/godot/godot-ui-control",
+      "category": "godot",
+      "acceptance": "skills/godot/godot-ui-control/references/acceptance.md",
+      "scenarios": [
+        "Menu and HUD remain usable after window resize and keyboard-only navigation",
+        "Long localized strings and a missing focus neighbor do not strand the player",
+        "Containers own child layout and modal overlays restore focus"
+      ]
+    },
+    {
+      "name": "bevy-ecs",
+      "path": "skills/other-engines/bevy-ecs",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/bevy-ecs/references/acceptance.md",
+      "scenarios": [
+        "The locked Bevy version compiles and a minimal scene demonstrates the system behavior",
+        "Missing query matches, despawned entities and repeated state entry are safe",
+        "Scheduling order is explicit where one system reads another system's writes"
+      ]
+    },
+    {
+      "name": "defold-core",
+      "path": "skills/other-engines/defold-core",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/defold-core/references/acceptance.md",
+      "scenarios": [
+        "Bob builds the project and the main collection reaches a controllable scene",
+        "Missing hashed ids, proxy load failure and repeated input focus are handled",
+        "Collection unload releases listeners and never routes messages to deleted objects"
+      ]
+    },
+    {
+      "name": "love2d-core",
+      "path": "skills/other-engines/love2d-core",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/love2d-core/references/acceptance.md",
+      "scenarios": [
+        "The game starts with the declared LÖVE version and completes one gameplay loop",
+        "Large dt after focus loss and missing assets do not crash or jump simulation",
+        "Window restart and state transitions do not retain duplicate callbacks"
+      ]
+    },
+    {
+      "name": "pygame-core",
+      "path": "skills/other-engines/pygame-core",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/pygame-core/references/acceptance.md",
+      "scenarios": [
+        "An isolated environment opens the game, processes events and exits cleanly",
+        "Quit during play, resize and missing mixer support do not freeze the process",
+        "Elapsed time drives movement and surfaces are reused where practical"
+      ]
+    },
+    {
+      "name": "roblox-characters",
+      "path": "skills/other-engines/roblox-characters",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/roblox-characters/references/acceptance.md",
+      "scenarios": [
+        "A character can spawn, act, die and respawn with working controls",
+        "CharacterAdded races, missing Humanoid and R6/R15 differences recover",
+        "Character-scope connections are disposed on CharacterRemoving"
+      ]
+    },
+    {
+      "name": "roblox-datastores",
+      "path": "skills/other-engines/roblox-datastores",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/roblox-datastores/references/acceptance.md",
+      "scenarios": [
+        "A separate test place round-trips a versioned player record",
+        "Throttling, API failure and concurrent sessions cannot overwrite a newer authoritative save",
+        "No client can write authoritative progression and tests avoid live-player records"
+      ]
+    },
+    {
+      "name": "roblox-luau",
+      "path": "skills/other-engines/roblox-luau",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/roblox-luau/references/acceptance.md",
+      "scenarios": [
+        "Server and client scripts run in their intended containers",
+        "Untrusted client arguments are type- and range-checked on the server",
+        "Player removal disconnects per-player connections and clears owned state"
+      ]
+    },
+    {
+      "name": "roblox-networking",
+      "path": "skills/other-engines/roblox-networking",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/roblox-networking/references/acceptance.md",
+      "scenarios": [
+        "A valid client request yields one server-authoritative result",
+        "Malformed, replayed and rate-excess requests cannot create state changes",
+        "The protocol has explicit ownership and handles disconnect/reconnect"
+      ]
+    },
+    {
+      "name": "roblox-physics",
+      "path": "skills/other-engines/roblox-physics",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/roblox-physics/references/acceptance.md",
+      "scenarios": [
+        "The intended assembly behaves correctly for server and two clients",
+        "Ownership changes, anchored parts and high-speed contacts are tested",
+        "Client physics observations are never accepted as proof of a server reward"
+      ]
+    },
+    {
+      "name": "roblox-studio-workflow",
+      "path": "skills/other-engines/roblox-studio-workflow",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/roblox-studio-workflow/references/acceptance.md",
+      "scenarios": [
+        "The change survives the canonical Studio or Rojo save/sync cycle",
+        "Repeated sync and multi-client play preserve unrelated project structure",
+        "Generated subtrees are changed through their owner rather than hand-edited"
+      ]
+    },
+    {
+      "name": "roblox-ui",
+      "path": "skills/other-engines/roblox-ui",
+      "category": "other-engines",
+      "acceptance": "skills/other-engines/roblox-ui/references/acceptance.md",
+      "scenarios": [
+        "HUD and menus survive respawn and small-screen emulation",
+        "Touch, gamepad focus and overlapping layers cannot activate hidden controls",
+        "PlayerGui listeners are rebuilt once and old GUI state is released"
+      ]
+    },
+    {
+      "name": "unity-animation",
+      "path": "skills/unity/unity-animation",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-animation/references/acceptance.md",
+      "scenarios": [
+        "The controller transitions through idle, movement and the requested action",
+        "Interrupted triggers, missing Avatar and repeated enable do not stick in a state",
+        "Root motion and physics have a single intended owner"
+      ]
+    },
+    {
+      "name": "unity-build-pipeline",
+      "path": "skills/unity/unity-build-pipeline",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-build-pipeline/references/acceptance.md",
+      "scenarios": [
+        "A clean player build launches the intended first scene",
+        "Missing scene inclusion, platform modules and stripped types are checked",
+        "Addressable or remote content failures show recovery instead of a blank screen"
+      ]
+    },
+    {
+      "name": "unity-csharp-scripting",
+      "path": "skills/unity/unity-csharp-scripting",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-csharp-scripting/references/acceptance.md",
+      "scenarios": [
+        "The component compiles and its behavior works through enable/disable/reload",
+        "Missing serialized references and destroyed objects do not throw each frame",
+        "OnEnable subscriptions are paired with OnDisable cleanup"
+      ]
+    },
+    {
+      "name": "unity-input-system",
+      "path": "skills/unity/unity-input-system",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-input-system/references/acceptance.md",
+      "scenarios": [
+        "Gameplay and UI action maps receive the intended actions",
+        "Device switching, rebinding conflicts and lost focus cannot leave held actions",
+        "The active input backend and UI input module agree"
+      ]
+    },
+    {
+      "name": "unity-navmesh",
+      "path": "skills/unity/unity-navmesh",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-navmesh/references/acceptance.md",
+      "scenarios": [
+        "An agent reaches a valid target on the baked surface",
+        "Unreachable destinations, off-mesh starts and moving obstacles recover",
+        "Agent settings and baked geometry match the player dimensions"
+      ]
+    },
+    {
+      "name": "unity-physics",
+      "path": "skills/unity/unity-physics",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-physics/references/acceptance.md",
+      "scenarios": [
+        "The intended collision or trigger event occurs exactly once per event",
+        "Kinematic/static pairs, tunneling and spawn overlaps are covered",
+        "Input is sampled separately from FixedUpdate force application"
+      ]
+    },
+    {
+      "name": "unity-scriptableobjects",
+      "path": "skills/unity/unity-scriptableobjects",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-scriptableobjects/references/acceptance.md",
+      "scenarios": [
+        "Two actors share configuration but maintain independent current stats",
+        "Repeated play mode and domain-reload settings cannot persist unintended mutations",
+        "Event-channel subscriptions are removed on object disable"
+      ]
+    },
+    {
+      "name": "unity-tilemap-2d",
+      "path": "skills/unity/unity-tilemap-2d",
+      "category": "unity",
+      "acceptance": "skills/unity/unity-tilemap-2d/references/acceptance.md",
+      "scenarios": [
+        "Painted tiles render and collide in a runnable player scene",
+        "Negative coordinates, empty tiles and collider rebuild timing are tested",
+        "Palette assets and runtime map state have separate ownership"
+      ]
+    },
+    {
+      "name": "unreal-behavior-trees",
+      "path": "skills/unreal/unreal-behavior-trees",
+      "category": "unreal",
+      "acceptance": "skills/unreal/unreal-behavior-trees/references/acceptance.md",
+      "scenarios": [
+        "A possessed pawn runs the tree and responds to a blackboard change",
+        "Missing controller, unreachable target and branch abort recover",
+        "Latent tasks finish or abort once and release callbacks"
+      ]
+    },
+    {
+      "name": "unreal-blueprints",
+      "path": "skills/unreal/unreal-blueprints",
+      "category": "unreal",
+      "acceptance": "skills/unreal/unreal-blueprints/references/acceptance.md",
+      "scenarios": [
+        "A reusable Blueprint instance completes its intended interaction",
+        "Repeated BeginPlay-like setup, missing references and destroyed actors are safe",
+        "The Construction Script does not perform runtime-only state changes"
+      ]
+    },
+    {
+      "name": "unreal-cpp-gameplay",
+      "path": "skills/unreal/unreal-cpp-gameplay",
+      "category": "unreal",
+      "acceptance": "skills/unreal/unreal-cpp-gameplay/references/acceptance.md",
+      "scenarios": [
+        "The module builds and a packaged actor exercises the exposed gameplay API",
+        "Garbage-collected references, null actors and invalid server requests are handled",
+        "Reflected ownership and generated-header placement match Unreal's build rules"
+      ]
+    },
+    {
+      "name": "unreal-enhanced-input",
+      "path": "skills/unreal/unreal-enhanced-input",
+      "category": "unreal",
+      "acceptance": "skills/unreal/unreal-enhanced-input/references/acceptance.md",
+      "scenarios": [
+        "The possessed local player receives move, look and action bindings",
+        "Possession changes and context priority conflicts do not duplicate or swallow input",
+        "Mapping contexts are removed from the matching player subsystem on teardown"
+      ]
+    },
+    {
+      "name": "unreal-niagara",
+      "path": "skills/unreal/unreal-niagara",
+      "category": "unreal",
+      "acceptance": "skills/unreal/unreal-niagara/references/acceptance.md",
+      "scenarios": [
+        "The effect renders at the intended world scale and ends on time",
+        "Burst repetition, culling and unavailable GPU features have defined behavior",
+        "Spawned systems are bounded and are destroyed or returned to a pool"
+      ]
+    },
+    {
+      "name": "unreal-packaging",
+      "path": "skills/unreal/unreal-packaging",
+      "category": "unreal",
+      "acceptance": "skills/unreal/unreal-packaging/references/acceptance.md",
+      "scenarios": [
+        "A packaged build opens the configured default map and accepts input",
+        "Missing cooked assets, case-sensitive paths and shipping-only configuration are checked",
+        "Platform prerequisites and signing remain separate from source publication"
+      ]
+    },
+    {
+      "name": "phaser-arcade-physics",
+      "path": "skills/web-engines/phaser-arcade-physics",
+      "category": "web-engines",
+      "acceptance": "skills/web-engines/phaser-arcade-physics/references/acceptance.md",
+      "scenarios": [
+        "A runnable scene confirms velocity, collisions and body size alignment",
+        "Static-body refresh, world bounds and fast contacts do not silently miss",
+        "Scene restart removes colliders and timers created by the prior scene"
+      ]
+    },
+    {
+      "name": "phaser-core",
+      "path": "skills/web-engines/phaser-core",
+      "category": "web-engines",
+      "acceptance": "skills/web-engines/phaser-core/references/acceptance.md",
+      "scenarios": [
+        "The pinned Phaser major starts, loads assets and switches scenes",
+        "Failed asset loads, resize and focus loss produce usable states",
+        "Scene shutdown releases input handlers, timers and external listeners"
+      ]
+    },
+    {
+      "name": "pixijs-rendering",
+      "path": "skills/web-engines/pixijs-rendering",
+      "category": "web-engines",
+      "acceptance": "skills/web-engines/pixijs-rendering/references/acceptance.md",
+      "scenarios": [
+        "Async application initialization renders sprites at the intended resolution",
+        "Missing textures, resize and renderer fallback are handled",
+        "Removed containers release owned resources without destroying shared textures"
+      ]
+    },
+    {
+      "name": "threejs-gltf-loading",
+      "path": "skills/web-engines/threejs-gltf-loading",
+      "category": "web-engines",
+      "acceptance": "skills/web-engines/threejs-gltf-loading/references/acceptance.md",
+      "scenarios": [
+        "A pinned GLTFLoader displays the model and plays the intended clip",
+        "Missing file, decoder and texture dependencies show an actionable fallback",
+        "Mixer actions stop and exclusively owned GPU resources are disposed"
+      ]
+    },
+    {
+      "name": "threejs-materials-lighting",
+      "path": "skills/web-engines/threejs-materials-lighting",
+      "category": "web-engines",
+      "acceptance": "skills/web-engines/threejs-materials-lighting/references/acceptance.md",
+      "scenarios": [
+        "The chosen PBR or unlit material is readable under the target lighting",
+        "Dark scenes, color-space mismatch and shadow acne are checked on target renderer",
+        "Cloned objects share or duplicate materials deliberately"
+      ]
+    },
+    {
+      "name": "threejs-scene-setup",
+      "path": "skills/web-engines/threejs-scene-setup",
+      "category": "web-engines",
+      "acceptance": "skills/web-engines/threejs-scene-setup/references/acceptance.md",
+      "scenarios": [
+        "Scene, camera and renderer display correctly after startup and resize",
+        "WebGL unavailable, zero-size container and background resume fail gracefully",
+        "One animation loop owns rendering and teardown disposes controls and renderer"
+      ]
+    },
+    {
+      "name": "game-jam",
+      "path": "skills/workflows/game-jam",
+      "category": "workflows",
+      "acceptance": "skills/workflows/game-jam/references/acceptance.md",
+      "scenarios": [
+        "The submitted build completes the core loop within the actual jam rules",
+        "A clean download, missing network and the final upload window are checked",
+        "Scope cuts protect a playable submission and asset rights follow the jam policy"
+      ]
+    },
+    {
+      "name": "itch-publish",
+      "path": "skills/workflows/itch-publish",
+      "category": "workflows",
+      "acceptance": "skills/workflows/itch-publish/references/acceptance.md",
+      "scenarios": [
+        "The uploaded HTML or native artifact launches from the actual project page",
+        "Nested zip roots, missing executable permissions and channel mismatch are detected",
+        "Draft visibility, pricing and public release follow the user's authorized scope"
+      ]
+    },
+    {
+      "name": "prototype-fast",
+      "path": "skills/workflows/prototype-fast",
+      "category": "workflows",
+      "acceptance": "skills/workflows/prototype-fast/references/acceptance.md",
+      "scenarios": [
+        "The prototype lets a new player attempt the core verb without a verbal tutorial",
+        "Failure, restart and a second attempt are possible within the timebox",
+        "Technical completion is separated from the untested hypothesis that the loop is fun"
+      ]
+    },
+    {
+      "name": "steam-publish",
+      "path": "skills/workflows/steam-publish",
+      "category": "workflows",
+      "acceptance": "skills/workflows/steam-publish/references/acceptance.md",
+      "scenarios": [
+        "The exact depot build installs and launches from a test branch",
+        "Wrong launch executable, missing depots and platform prerequisites are checked",
+        "Store visibility, paid onboarding and release actions require existing authorization"
+      ]
+    },
+    {
+      "name": "game-product-brief",
+      "path": "skills/workflows/game-product-brief",
+      "category": "workflows",
+      "acceptance": "skills/workflows/game-product-brief/SKILL.md",
+      "scenarios": []
+    },
+    {
+      "name": "game-engine-selection",
+      "path": "skills/workflows/game-engine-selection",
+      "category": "workflows",
+      "acceptance": "skills/workflows/game-engine-selection/SKILL.md",
+      "scenarios": []
+    },
+    {
+      "name": "game-code-quality",
+      "path": "skills/workflows/game-code-quality",
+      "category": "workflows",
+      "acceptance": "skills/workflows/game-code-quality/SKILL.md",
+      "scenarios": []
+    },
+    {
+      "name": "game-playtest-release",
+      "path": "skills/workflows/game-playtest-release",
+      "category": "workflows",
+      "acceptance": "skills/workflows/game-playtest-release/SKILL.md",
+      "scenarios": []
+    },
+    {
+      "name": "web-game-core",
+      "path": "skills/web-engines/web-game-core",
+      "category": "web-engines",
+      "acceptance": "skills/web-engines/web-game-core/SKILL.md",
+      "scenarios": []
+    }
+  ]
+}

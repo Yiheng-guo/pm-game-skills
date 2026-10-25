@@ -8,6 +8,14 @@ description: >
   syncing gameplay to the beat.
 ---
 
+## Delivery contract
+
+Use the actual project version and the player's observable outcome as the contract.
+For a whole-game request, compose with `game-product-brief`, `game-engine-selection`,
+`game-code-quality` and `game-playtest-release` as needed; a narrow fix does not require
+creating a new process or changing engines. Read [acceptance scenarios](references/acceptance.md)
+before declaring this feature ready. These are test specifications, not evidence of execution.
+
 # Godot Audio (4.x)
 
 Play SFX and music, route them through buses, control volume in decibels, and time

@@ -1,6 +1,8 @@
 {
-  "name": "awesome-gamedev-agent-skills",
-  "owner": { "name": "gamedev-skills" },
+  "name": "pm-game-skills",
+  "owner": {
+    "name": "Yiheng-guo"
+  },
   "metadata": {
     "description": "Cross-engine game-development Agent Skills, grouped by engine, discipline, genre, and workflow."
   },
@@ -8,7 +10,7 @@
     {
       "name": "gamedev",
       "source": "./",
-      "description": "Everything: the master router plus all 76 game-dev skills across every engine, discipline, genre, and workflow.",
+      "description": "81 focused game-development skills plus a router, with product briefs, engine selection, code quality and playtest release.",
       "strict": false,
       "skills": [
         "./router",
@@ -87,7 +89,12 @@
         "./skills/workflows/game-jam",
         "./skills/workflows/prototype-fast",
         "./skills/workflows/steam-publish",
-        "./skills/workflows/itch-publish"
+        "./skills/workflows/itch-publish",
+        "./skills/workflows/game-product-brief",
+        "./skills/workflows/game-engine-selection",
+        "./skills/workflows/game-code-quality",
+        "./skills/workflows/game-playtest-release",
+        "./skills/web-engines/web-game-core"
       ]
     },
     {
@@ -173,14 +180,15 @@
         "./skills/web-engines/pixijs-rendering",
         "./skills/web-engines/threejs-scene-setup",
         "./skills/web-engines/threejs-gltf-loading",
-        "./skills/web-engines/threejs-materials-lighting"
+        "./skills/web-engines/threejs-materials-lighting",
+        "./skills/web-engines/web-game-core"
       ]
     },
     {
       "name": "other-engines",
       "source": "./",
       "strict": false,
-      "description": "Bevy, pygame, LÖVE, Defold, and production-focused Roblox engine skills.",
+      "description": "Bevy, pygame, L\u00d6VE, Defold, and production-focused Roblox engine skills.",
       "skills": [
         "./skills/other-engines/bevy-ecs",
         "./skills/other-engines/pygame-core",
@@ -244,7 +252,11 @@
         "./skills/workflows/game-jam",
         "./skills/workflows/prototype-fast",
         "./skills/workflows/steam-publish",
-        "./skills/workflows/itch-publish"
+        "./skills/workflows/itch-publish",
+        "./skills/workflows/game-product-brief",
+        "./skills/workflows/game-engine-selection",
+        "./skills/workflows/game-code-quality",
+        "./skills/workflows/game-playtest-release"
       ]
     }
   ]

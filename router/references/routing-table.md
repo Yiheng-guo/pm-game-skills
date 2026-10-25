@@ -157,3 +157,11 @@ the detected engine lacks, load the closest skill(s) and **state the gap** plain
   to `defold-core`. There is no Defold GUI, sprite/tilemap or collision skill yet: use
   `defold-core` (its build reference links the official manuals for those subsystems) plus
   `game-ui-ux` / `level-design` / `physics-tuning`, and state the gap.
+
+## Product workflow and browser-native games
+
+- `game-product-brief` — Define a testable game prototype from a short product idea. Use for new games and substantial gameplay scope changes, not isolated bug fixes.
+- `game-engine-selection` — Choose a game stack from player, device, delivery and project constraints; preserve an existing engine unless migration is requested.
+- `game-code-quality` — Implement maintainable gameplay with explicit state ownership, deterministic rules and targeted regression checks. Use during game implementation or review.
+- `game-playtest-release` — Validate a complete game loop, collect privacy-conscious playtest evidence and publish a verified shareable artifact. Use for game acceptance, playtesting and release.
+- `web-game-core` — Build small browser-native games with DOM or SVG, ES modules, keyboard and touch, deterministic rules and static subpath hosting. Use for board, card or turn-based prototypes without a required engine.

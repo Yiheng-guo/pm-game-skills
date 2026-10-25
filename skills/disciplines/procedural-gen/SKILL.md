@@ -9,6 +9,14 @@ description: >
   heightmap/terrain, or loot tables.
 ---
 
+## Delivery contract
+
+Use the actual project version and the player's observable outcome as the contract.
+For a whole-game request, compose with `game-product-brief`, `game-engine-selection`,
+`game-code-quality` and `game-playtest-release` as needed; a narrow fix does not require
+creating a new process or changing engines. Read [acceptance scenarios](references/acceptance.md)
+before declaring this feature ready. These are test specifications, not evidence of execution.
+
 # Procedural generation
 
 Generate levels, terrain, and loot from compact rules and a seed. The throughline

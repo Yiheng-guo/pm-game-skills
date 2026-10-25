@@ -10,7 +10,7 @@ OUT = Path(sys.argv[1] if len(sys.argv) > 1 else "_site")
 BASE = (
     sys.argv[2]
     if len(sys.argv) > 2
-    else "https://gamedev-skills.github.io/awesome-gamedev-agent-skills"
+    else "https://yiheng-guo.github.io/pm-game-skills"
 ).rstrip("/")
 
 title_re = re.compile(r"<title>(.*?)</title>", re.S)

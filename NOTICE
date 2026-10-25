@@ -13,3 +13,9 @@ Game engine, framework, and platform names referenced in this repository
 three.js, Babylon.js, Bevy, GameMaker, LÖVE, and MonoGame) are trademarks of
 their respective owners and are used for identification and descriptive purposes
 only. Their use does not imply any affiliation with or endorsement by those owners.
+
+PM Game Skills derivative: Copyright 2026 Yiheng-guo.
+Changes add product-to-playable workflows, per-skill acceptance scenarios,
+browser-native game guidance and portable installation/verification tools.
+Upstream source: gamedev-skills/awesome-gamedev-agent-skills
+Upstream revision: 184b72be02884f782a0058f2eeae2ce4277453e4

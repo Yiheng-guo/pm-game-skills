@@ -8,6 +8,14 @@ description: >
   post-processing, or working with Node3D/.tscn 3D content and GridMap.
 ---
 
+## Delivery contract
+
+Use the actual project version and the player's observable outcome as the contract.
+For a whole-game request, compose with `game-product-brief`, `game-engine-selection`,
+`game-code-quality` and `game-playtest-release` as needed; a narrow fix does not require
+creating a new process or changing engines. Read [acceptance scenarios](references/acceptance.md)
+before declaring this feature ready. These are test specifications, not evidence of execution.
+
 # Godot 3D Essentials (4.x)
 
 Assemble a working 3D scene: transforms, camera, lights, environment/post, materials, and

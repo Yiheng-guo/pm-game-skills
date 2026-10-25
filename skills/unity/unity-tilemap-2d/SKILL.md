@@ -7,6 +7,14 @@ description: >
   code, or when the user mentions Unity tilemap, tile palette, rule tile, or Grid.
 ---
 
+## Delivery contract
+
+Use the actual project version and the player's observable outcome as the contract.
+For a whole-game request, compose with `game-product-brief`, `game-engine-selection`,
+`game-code-quality` and `game-playtest-release` as needed; a narrow fix does not require
+creating a new process or changing engines. Read [acceptance scenarios](references/acceptance.md)
+before declaring this feature ready. These are test specifications, not evidence of execution.
+
 # Unity 2D Tilemap
 
 Author and script tile-based 2D levels in Unity 6.3 LTS with the `Grid`/`Tilemap` system, the Tile

@@ -25,8 +25,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUT = REPO_ROOT / "_site"
-DEFAULT_BASE_URL = "https://gamedev-skills.github.io/awesome-gamedev-agent-skills"
-REPO_SLUG = "gamedev-skills/awesome-gamedev-agent-skills"
+DEFAULT_BASE_URL = "https://yiheng-guo.github.io/pm-game-skills"
+REPO_SLUG = "Yiheng-guo/pm-game-skills"
 GITHUB_BLOB = f"https://github.com/{REPO_SLUG}/blob/main"
 INSTALL_CMD = f"npx skills add {REPO_SLUG}"
 

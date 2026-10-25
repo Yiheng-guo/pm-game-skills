@@ -5,6 +5,14 @@ description: >
   pushes, tile logic), scoring, and undo. Use for a match-3, sokoban, or grid-logic puzzle.
 ---
 
+## Delivery contract
+
+Use the actual project version and the player's observable outcome as the contract.
+For a whole-game request, compose with `game-product-brief`, `game-engine-selection`,
+`game-code-quality` and `game-playtest-release` as needed; a narrow fix does not require
+creating a new process or changing engines. Read [acceptance scenarios](references/acceptance.md)
+before declaring this feature ready. These are test specifications, not evidence of execution.
+
 # Puzzle
 
 A playbook for grid/board puzzle games — the board model, move input, rule resolution
@@ -130,7 +138,7 @@ snapshots to save memory; snapshots are simplest and fine for small boards.
 
 ## Composition (build it from these skills)
 
-- **Board rendering:** `godot-tilemap` / `unity-tilemap-2d` for the grid; `godot-ui-control` for HUD, score, and menus.
+- **Board rendering:** `web-game-core` for browser-native boards, or `godot-tilemap` / `unity-tilemap-2d` for the grid; `godot-ui-control` for HUD, score, and menus.
 - **Levels:** `level-design` for hand-authored puzzles and difficulty pacing; `procedural-gen` for solvable generated boards.
 - **Persistence:** `save-systems` for level progress, high scores, and seeded daily puzzles.
 - **Juice:** `game-feel` for match/cascade pop, screen shake, and chain feedback; the engine animation/`Tween` skill for swaps/falls/clears; `audio-design` for match and chain cues.
