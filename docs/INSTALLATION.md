@@ -66,17 +66,17 @@ claude plugin marketplace add Yiheng-guo/pm-game-skills
 Easiest — install the router and all 81 skills in one command:
 
 ```bash
-claude plugin install gamedev@awesome-gamedev-agent-skills
+claude plugin install gamedev@pm-game-skills
 ```
 
 Or install just what you use (each engine and category is its own plugin):
 
 ```bash
-claude plugin install router@awesome-gamedev-agent-skills        # always install this
-claude plugin install godot@awesome-gamedev-agent-skills         # engine: godot | unity | unreal | ebitengine | web-engines | other-engines
-claude plugin install disciplines@awesome-gamedev-agent-skills   # cross-engine concepts
-claude plugin install genres@awesome-gamedev-agent-skills        # genre templates
-claude plugin install workflows@awesome-gamedev-agent-skills     # jam / prototype / shipping
+claude plugin install router@pm-game-skills        # always install this
+claude plugin install godot@pm-game-skills         # engine: godot | unity | unreal | ebitengine | web-engines | other-engines
+claude plugin install disciplines@pm-game-skills   # cross-engine concepts
+claude plugin install genres@pm-game-skills        # genre templates
+claude plugin install workflows@pm-game-skills     # jam / prototype / shipping
 ```
 
 Verify with `/plugin` or `/skills` inside Claude Code, or `claude plugin list` in your shell. Plugin
@@ -86,7 +86,7 @@ skills are namespaced by plugin, so to invoke one directly type `/<plugin>:<skil
 Add `--scope project` to `claude plugin marketplace add` and `claude plugin install` to record
 them in the project's settings and share them with your team. To pick up a new release, run
 `claude plugin marketplace update awesome-gamedev-agent-skills`, then
-`claude plugin update gamedev@awesome-gamedev-agent-skills` (or the plugin you installed).
+`claude plugin update gamedev@pm-game-skills` (or the plugin you installed).
 
 ## Claude Code (manual copy)
 

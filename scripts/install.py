@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def fingerprint(folder: Path) -> dict[str, str]:
     result = {}
     for path in sorted(folder.rglob('*')):
+        if '__pycache__' in path.relative_to(folder).parts or path.name == '.DS_Store' or path.suffix == '.pyc':
+            continue
         if path.is_symlink():
             raise ValueError(f'Symlinks are unsupported: {path}')
         if path.is_file():
@@ -61,7 +63,7 @@ def install(root: Path, dest: Path, backup: Path | None = None, dry_run: bool = 
     with tempfile.TemporaryDirectory(prefix='.skills-stage-', dir=dest.parent) as stage_dir:
         stage = Path(stage_dir)
         for src in changed:
-            shutil.copytree(src, stage / src.name)
+            shutil.copytree(src, stage / src.name, ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '.DS_Store'))
             if fingerprint(src) != fingerprint(stage / src.name):
                 raise ValueError(f'Staged copy mismatch: {src.name}')
         if backup:

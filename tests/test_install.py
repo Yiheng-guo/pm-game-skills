@@ -57,6 +57,13 @@ class InstallTests(unittest.TestCase):
         installer.install(self.root, self.dest, dry_run=True)
         self.assertFalse(self.dest.exists())
 
+    def test_local_python_caches_are_not_distributed(self):
+        cache = self.root / 'router/__pycache__'
+        cache.mkdir()
+        (cache / 'helper.pyc').write_bytes(b'local-generated-cache')
+        installer.install(self.root, self.dest)
+        self.assertFalse((self.dest / 'router/__pycache__').exists())
+
     def test_nested_backup_rejected(self):
         with self.assertRaises(ValueError):
             installer.install(self.root, self.dest, self.dest / 'backup')
